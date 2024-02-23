@@ -16,9 +16,9 @@ public class LogarithmTest {
         double num;
         System.out.println("Enter value : ");
 
-        Scanner input = new Scanner(System.in);
-        num = input.nextDouble();
-
+        try (Scanner input = new Scanner(System.in)) {
+            num = input.nextDouble();
+        }
         Logarithm log = new Logarithm();
 
         System.out.println("log(" + num + ") = " + log.logResult(num));
